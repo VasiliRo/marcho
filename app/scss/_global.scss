@@ -1,3 +1,16 @@
+html, body{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.main{
+    flex-grow: 1;
+}
+
 .container-big{
     max-width: 1773px;
     padding: 0 10px;

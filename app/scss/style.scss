@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 
@@ -34,7 +35,7 @@
     &__list-link{
         font-size: 15px;
         color: #436372;
-        @extend %rubick-700;
+        @extend %rubik-700;
     }
 }
 
@@ -112,7 +113,7 @@
         padding-bottom: 18px;
     }
     &__column-link{
-        // @extend %rubik-500;
+        @extend %rubik-500;
         font-size: 14px;
         color: #7B7B7B;
     }
@@ -121,13 +122,14 @@
         @extend %dmsans-700;
         font-size: 16px;
         padding-bottom: 25px;
+        padding-top: 20px;
         text-transform: uppercase;
     }
     &__column-newslatter{
         max-width: 270px;
     }
     &__column-newsletter-text{
-        // @extend %rubik-500;
+        @extend %rubik-500;
         font-size: 14px;
         color: #7B7B7B;
         padding-bottom: 25px;
@@ -156,6 +158,89 @@
         cursor: pointer;
     }
 }
+
+.top-slider{
+    &__item{
+        background-color: $accent-bg;
+        padding: 225px 300px 280px;
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__content{
+        max-width: 407px;
+    }
+    &__title{
+        color: #243F4D;
+        font-size: 72px;
+        line-height: 82px;
+        letter-spacing: -1px;
+        @extend %rubik-500;
+        margin-bottom: 45px;
+    }
+    &__text{
+        color: #436372;
+        @extend %rubik-400;
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 40px;
+        max-width: 360px;
+    }
+    &__link{
+        display: inline-block;
+        padding: 26px 101px 21px 28px;
+        background-color: #A3BBC8;
+        color: #fff;
+        @extend %rubik-500;
+        font-size: 15px;
+        position: relative;
+        &::after{
+            position: absolute;
+            content: url('../images/shop_now-img.svg');
+            top: 25px;
+            right: 21px;
+        }
+    }
+    // &__img{
+    //     position: relative;
+    //     &::after{
+    //         position: absolute;
+    //         content: '';
+    //         width: 635px;
+    //         height: 635px;
+    //         border-radius: 50%;
+    //         background-color: #436372;
+    //         top: 50px;
+    //         right: 50px;
+    //     }
+    // }
+    .slick-dots{
+        display: flex;
+        position: absolute;
+        left: 50%;
+        bottom: 45px;
+        button{
+            background-color: rgba(255, 255, 255, 0.3);
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            color: #243F4D;
+            font-size: 15px;
+            @extend %rubik-500;
+            margin-right: 10px;
+        }
+    }
+    .slick-active{
+        button{
+            background-color: #fff;
+        }
+    }
+}
+
+
+
+
 
 .footer-bottom{
     padding: 35px 0;
