@@ -71,7 +71,7 @@
         padding: 0 42px;
         margin: 0 20px;
         border-radius: 26px;
-        background-color: #FCD7B6;
+        background-color: $accent-bg;
         img{
             width: 20px;
             height: 18px;
@@ -92,6 +92,26 @@
     &__double-btn-line{
         width: 1px;
         height: 35px;background-color: #fff;
+    }
+}
+
+
+.footer-top{
+    display: flex;
+    justify-content: space-between;
+    padding: 75px 0;
+    .footer__logo{
+        margin-bottom: 30px;
+    }
+    &__column-adress{
+        min-width: 191px;
+    }
+    &__column-adress-item{
+        padding-bottom: 23px;
+    }
+    &__column-adress-link{
+        @extend %rubik-400;
+        color: #7B7B7B;
     }
 }
 
