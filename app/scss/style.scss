@@ -312,13 +312,13 @@
         grid-column-gap: 30px;
         justify-content: space-between;
     }
-    &__products-link{
+    &__products-item{
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
         box-shadow: 0 14px 28px rgba(0,0,0,0.1);
         padding-bottom: 38px;
-        position: relative;
     }
     &__products-img{
         margin: auto;
@@ -335,17 +335,37 @@
         color: #A3BBC8;
     }
     &__products-hover{
-        // display: none;
         position: absolute;
         display: flex;    
-        top: 50px;
-        left: 20px;    
+        top: 182px;
+        left: 50px;  
+        opacity: 0;
+        transition: all .5s;
     }
     .hover-link{
         width: 46px;
         height: 46px;
         border-radius: 50%;
-        background-color: red;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all .3s;
+
+    }
+    .hover-link:hover{
+        background-color: #A3BBC8;
+        svg{
+            fill: #fff;
+        }
+    }
+    .hover-link+.hover-link{
+        margin-left: 15px;
+    }
+    &__products-item:hover{
+        .ofTheWeek__products-hover{
+            opacity: 1;
+        }
     }
 }
 
