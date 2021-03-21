@@ -196,7 +196,7 @@
         position: relative;
         &::after{
             position: absolute;
-            content: url('../images/shop_now-img.svg');
+            content: url('../images/arrow-img.svg');
             top: 25px;
             right: 21px;
         }
@@ -365,6 +365,56 @@
     &__products-item:hover{
         .ofTheWeek__products-hover{
             opacity: 1;
+        }
+    }
+}
+
+.specialOffer{
+    padding-top: 100px;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item{
+        position: relative;
+        min-height: 390px;
+        max-width: 870px;
+        background-color: rgba(252, 215, 182, 0.4);
+        padding: 0 150px 0 390px;
+        display: flex;
+        align-items: center;
+        color: #243F4D;
+    }
+    &__item-img{
+        position: absolute;
+        top: -99px;
+        left: 138px;
+    }
+    &__item-title{
+        @extend %dmsans-700;
+        font-size: 26px;
+        margin-bottom: 32px;
+    }
+    &__item-descr{
+        @extend %rubik-400;
+        font-size: 16px;
+        margin-bottom: 33px;
+
+    }
+    &__item-link{
+        color: #436372;
+        padding: 25px 86px 25px 21px;
+        @extend %rubik-500;
+        font-size: 15px;
+        border: 1px solid #243F4D;
+        border-radius: 5px;
+        display: inline-block;
+        position: relative;
+        &::after{
+            position: absolute;
+            content: url('../images/arrow-2.svg');
+            top: 25px;
+            right: 20px;
         }
     }
 }
