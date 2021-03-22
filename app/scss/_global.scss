@@ -27,12 +27,18 @@ body{
     @extend %dmsans-700;
     font-size: 36px;
     color: #191919;
+    text-align: center;
 }
 
 .section__filtr{
     max-width: 380px;
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
+
+    .mixitup-control-active{
+        @extend %dmsans-700;
+    }
 }
 .section__filtr-btn{
     background-color: transparent;
