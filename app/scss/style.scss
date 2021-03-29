@@ -525,9 +525,6 @@
 
 .modal{
     padding-top: 120px;
-    &__inner{
-        
-    }
     &__form{
         max-width: 480px;
         width: 100%;
@@ -865,6 +862,84 @@
         justify-content: center;
         align-items: center;
     }
+}
+
+.shop{
+    &__inner{
+        display: flex;
+    }
+}
+
+.filter{
+    width: 273px;
+    &__item{
+        color: $accent;
+    }
+    &__title{
+        @extend %dmsans-700;
+        font-size: 18px;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 4px;
+            background-color: #A3BBC8;
+            top: 8px;
+        }
+    }
+    .price-title{
+        margin-bottom: 34px;
+        &::after{
+            left: 60px;
+        }
+    }
+}
+
+.filter-price{
+    &__label{
+        display: flex;
+        justify-content: space-between;
+        @extend %rubik-400;
+        font-size: 14px;
+        margin-top: 22px;
+    } 
+}
+      
+.irs--flat .irs-line {
+    top: 0;
+    height: 4px;
+    background-color: rgba($color: #A3BBC8, $alpha: 0.66);
+    border-radius: 4px;
+}
+
+.irs--flat .irs-handle {
+    top: -6px;
+    width: 16px;
+    height: 16px;
+    background-color: #A3BBC8;
+}
+
+.irs--flat .irs-handle > i:first-child {
+    display: none;
+}
+
+.irs--flat .irs-bar {
+    top: -0.55px;
+    height: 5px;
+    background-color: #A3BBC8;
+}
+
+.irs--flat .irs-from, .irs--flat .irs-to, .irs--flat .irs-single{
+    display: none;
+}
+
+
+.irs--flat .irs-min, .irs--flat .irs-max {
+    display: none;
+}
+.irs--flat {
+    height: 8px;
 }
 
 
