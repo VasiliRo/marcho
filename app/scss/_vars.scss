@@ -41,6 +41,12 @@ $accent: #243F4D;
     font-weight: 700;
 }
 
+%poppins-600{
+    font-family: 'Poppins-SemiBold', sans-serif;
+    font-weight: 600;
+}
+
+
 
 
 @function max($numbers...) {
