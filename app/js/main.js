@@ -14,6 +14,16 @@ $(function(){
     });
 
 
+    $('.filter-star__info-rate').rateYo({
+        rating: 3.6,
+        starWidth: "10px",
+        normalFill: "#ccccce",
+        ratedFill: "#ffc35b",
+        spacing: "6px",
+        readOnly: true
+      });
+
+
     $('.top-slider__inner').slick({
         dots: true,
         arrows: false,
