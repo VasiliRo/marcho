@@ -125,7 +125,7 @@
         max-width: 407px;
     }
     &__title{
-        color: #243F4D;
+        color: $accent;
         font-size: 72px;
         line-height: 82px;
         letter-spacing: -1px;
@@ -183,7 +183,7 @@
             width: 30px;
             height: 30px;
             border-radius: 50%;
-            color: #243F4D;
+            color: $accent;
             font-size: 15px;
             @extend %rubik-500;
             margin-right: 10px;
@@ -279,7 +279,7 @@
     &__products-title{
         @extend %dmsans-700;
         font-size: 16px;
-        color: #243F4D;
+        color: $accent;
     }
     &__products-price{
         margin-top: 17px;
@@ -336,7 +336,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        color: #243F4D;
+        color: $accent;
     }
     &__item-img{
         margin-right: 20px;
@@ -360,7 +360,7 @@
         padding: 25px 86px 25px 21px;
         @extend %rubik-500;
         font-size: 15px;
-        border: 1px solid #243F4D;
+        border: 1px solid $accent;
         border-radius: 5px;
         display: inline-block;
         position: relative;
@@ -571,7 +571,7 @@
         border: none;
         border: 1px solid #A3BBC8;
         background-color: #fff;
-        color: #243F4D;
+        color: $accent;
         @extend %rubik-500;
         font-size: 18px;
         padding: 24px 0;
@@ -585,7 +585,7 @@
 .terms{
     padding-top: 120px;
     &__content{
-        color: #243F4D;
+        color: $accent;
         line-height: 23px;
     }
     &__block+.terms__block{
@@ -615,7 +615,7 @@
 
 .about{
     padding: 120px 0;
-    color: #243F4D;
+    color: $accent;
     &__inner{
         display: flex;
         justify-content: space-between;
@@ -874,6 +874,8 @@
     width: 273px;
     &__item{
         color: $accent;
+        @extend %rubik-400;
+        font-size: 16px;
     }
     &__title{
         @extend %dmsans-700;
@@ -887,6 +889,12 @@
             height: 4px;
             background-color: #A3BBC8;
             top: 9px;
+        }
+    }
+    .category-title{
+        margin-bottom: 30px;
+        &::after{
+            left: 106px;
         }
     }
     .price-title{
@@ -910,7 +918,32 @@
 }
 
 .filter-category{
-
+    margin-bottom: 75px;
+    &__label{
+        margin-bottom: 5px;
+        cursor: pointer;
+        display: block;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    &__input{
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        position: absolute;
+        &:checked + .filter-category__checkbox{
+            background-color: rgba($color: #A3BBC8, $alpha: 0.2);
+            border-radius: 5px;
+        }
+    }
+    &__checkbox{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 17px 22px 17px 15px;
+    }
 }
 
 
@@ -919,7 +952,6 @@
     &__label{
         display: flex;
         justify-content: space-between;
-        @extend %rubik-400;
         font-size: 14px;
         margin-top: 22px;
     } 
@@ -943,6 +975,7 @@
         position: absolute;
         &:checked + .filter-brand__checkbox{
             background-color: rgba($color: #A3BBC8, $alpha: 0.2);
+            border-radius: 5px;
             .filter-brand__num{
                 color: $accent;
             }
@@ -953,8 +986,6 @@
         justify-content: space-between;
         align-items: center;
         padding: 17px 24px 17px 17px;
-        @extend %rubik-400;
-        font-size: 16px;
     }
     &__num{
         color: #A3BBC8;
@@ -981,9 +1012,6 @@
     &__img{
         margin: auto;
     }
-    &__info{
-        @extend %rubik-400;        
-    }
     &__info-link{
         color: #333333;
         font-size: 14px;
@@ -993,7 +1021,6 @@
         padding: 0;
     }
     &__info-price{
-        font-size: 16px;
         color: #333333;
         margin-top: 11px;
     }
