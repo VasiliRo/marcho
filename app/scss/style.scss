@@ -51,6 +51,14 @@
         border-radius: 50%;
         background-color: #A3BBC8;       
     }
+    &__tile{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__list{
+        border: 2px solid #000;
+    }
     &__search{
         background-color: rgba(163, 187, 200, 0.2);
     }
@@ -59,11 +67,11 @@
         top: 17px;
         left: 17px;
     }
-    &__tile-img{
-        position: absolute;
-        top: 15px;
-        left: 15px;
-    }
+    // &__tile-img{
+    //     position: absolute;
+    //     top: 15px;
+    //     left: 15px;
+    // }
     &__double-btn{
         display: flex;
         justify-content: space-between;
@@ -865,8 +873,155 @@
 }
 
 .shop{
+    padding: 120px 0;
     &__inner{
         display: flex;
+    }
+    &__content{
+        margin-left: 28px;
+        width: 100%;
+    }
+    &__items{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 380px );
+        grid-row-gap: 40px;
+        grid-column-gap: 30px;
+        justify-content: space-between;
+        margin-bottom: 105px;
+    }
+    .ofTheWeek__products-images{
+        margin: auto;
+    }
+    &__products-info{
+        text-align: center;
+    }
+    &__products-rate,
+    &__products-text{
+        display: none;
+    }
+    .hover-link{
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all .3s;
+        &:nth-child(2){
+            span{
+                color: #fff;
+                @extend %rubik-400;
+                font-size: 15px;
+                text-transform: uppercase;
+                display: none;
+            }
+        }
+
+    }
+    .hover-link:hover{
+        background-color: #A3BBC8;
+        svg{
+            fill: #fff;
+        }
+    }
+    .hover-link+.hover-link{
+        margin-left: 15px;
+    }
+    &__page-links{
+        text-align: center;
+    }
+    &__page-link{
+        display: inline-block;
+        padding: 20px 21px 19px 22px;
+        background-color: #fff;
+        border: 1px solid #A3BBC8;
+        color: $accent;
+        @extend %rubik-400;
+        font-size: 16px;
+        margin-right: 14px;
+        transition: all .3s;
+        &:hover{
+            color: #fff;
+            background-color: #A3BBC8;
+        }
+    }
+    &__page-link--active{
+        color: #fff;
+        background-color: #A3BBC8;
+    }
+    &__content.shop__content--list{
+        .shop__items{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .ofTheWeek__products-item{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            padding-bottom: 0;
+            margin-bottom: 40px;
+            box-shadow: none;
+        }
+        .ofTheWeek__products-images{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 371px;
+            height: 502px;
+            border: 2px solid #F2F2F2;
+            margin: 0;
+        }
+        .ofTheWeek__products-hover{
+            position: static;
+            opacity: 1;
+        }
+        .shop__products-rate,
+        .shop__products-text{
+            display: block;
+        }
+        .shop__products-info{
+            max-width: 405px;
+            width: 100%;
+            text-align: left;
+            padding-left: 57px;
+        }
+        .ofTheWeek__products-title{
+            font-size: 40px;
+            margin-bottom: 25px;
+        }
+        .ofTheWeek__products-price{
+            font-size: 30px;
+            margin: 37px 0;
+        }
+        .shop__products-text{
+            color: $accent;
+            @extend %rubik-400;
+            font-size: 16px;
+            margin-bottom: 33px;
+        }
+        .hover-link{
+            margin: 0 10px 0 0;
+            width: 51px;
+            height: 51px;
+            border-radius: 0;
+            transition: all .3s;
+            &:first-child{
+                display: none;
+            }
+            &:nth-child(2):hover{
+                width: 210px;
+                border-radius: 5px;
+                &+.hover-link,
+                svg{
+                    display: none;
+                }
+                span{
+                    display: inline;
+                }
+            }
+        }
     }
 }
 
@@ -1061,6 +1216,9 @@
 .irs--flat {
     height: 8px;
 }
+
+
+
 
 
 
