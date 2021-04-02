@@ -47,3 +47,31 @@ body{
     font-size: 16px;
     color: #1A1A1A;
 }
+
+.breadcrumbs{
+    &__list{
+        display: flex;
+        justify-content: center;
+    }
+    &__item{
+        padding-right: 25px;
+        position: relative;
+        &::after{
+            position: absolute;
+            content: '/';
+            right: 10px;
+            top: 1px;
+        }
+        &:last-child{
+            padding-right: 0;
+            &::after{
+                display: none;
+            }
+        }
+    }
+    &__item-link{
+        color: rgba(34, 41, 51, 0.6);
+        @extend %rubik-400;
+        font-size: 14px;
+    }
+}

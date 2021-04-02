@@ -1,4 +1,10 @@
 $accent-bg: #FCD7B6;
+$accent: #243F4D;
+
+%rubik-300{
+    font-family: 'Rubik-Light', sans-serif;
+    font-weight: 300;
+}
 
 %rubik-400{
     font-family: 'Rubik-Regular', sans-serif;
@@ -29,6 +35,19 @@ $accent-bg: #FCD7B6;
     font-family: 'DMSans-Medium', sans-serif;
     font-weight: 500;
 }
+
+%poppins-700{
+    font-family: 'Poppins-Bold', sans-serif;
+    font-weight: 700;
+}
+
+%poppins-600{
+    font-family: 'Poppins-SemiBold', sans-serif;
+    font-weight: 600;
+}
+
+
+
 
 @function max($numbers...) {
     @return m#{a}x(#{$numbers});
