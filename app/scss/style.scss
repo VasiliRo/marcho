@@ -281,6 +281,10 @@
         box-shadow: 0 14px 28px rgba(0,0,0,0.1);
         padding-bottom: 38px;
     }
+    &__products-images{
+        // padding: 40px;
+        padding: 45px;
+    }
     &__products-img{
         margin: auto;
     }
@@ -303,32 +307,41 @@
         opacity: 0;
         transition: all .5s;
     }
-    .hover-link{
-        width: 46px;
-        height: 46px;
-        border-radius: 50%;
-        background-color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all .3s;
-
-    }
-    .hover-link:hover{
-        background-color: #A3BBC8;
-        svg{
-            fill: #fff;
-        }
-    }
-    .hover-link+.hover-link{
-        margin-left: 15px;
-    }
+    
     &__products-item:hover{
         .ofTheWeek__products-hover{
             opacity: 1;
         }
     }
 }
+
+
+.hover-link{
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s;
+    &:nth-child(2){
+        span{
+            display: none;
+        }
+    }
+
+}
+.hover-link:hover{
+    background-color: #A3BBC8;
+    svg{
+        fill: #fff;
+    }
+}
+.hover-link+.hover-link{
+    margin-left: 15px;
+}
+
 
 .specialOffer{
     padding-top: 100px;
@@ -524,7 +537,7 @@
 .partners{
     background-color: rgba(252, 215, 182, 0.2);
     padding: 265px 0 89px;
-    margin-top: -195px;
+    margin-top: -210px;
     &__inner{
         display: flex;
         justify-content: space-around;
@@ -1216,6 +1229,254 @@
 .irs--flat {
     height: 8px;
 }
+
+.detalis{
+    padding: 120px 0;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 100px;
+    }
+    &__content{
+        color: #333333;
+        @extend %rubik-400;
+    }
+    &__content-title{
+        font-size: 40px;
+        margin-bottom: 18px;
+    }
+    &__content-rate{
+        margin-bottom: 37px;
+    }
+    &__content-price{
+        font-size: 30px;
+        margin-bottom: 36px;
+    }
+    &__content-text{
+        width: 530px;
+        color: $accent;
+        font-size: 16px;
+        margin-bottom: 33px;
+        line-height: 28px;
+    }
+    &__content-form{
+        margin-bottom: 58px;
+    }
+    &__content-btn{
+        border: none;
+        background-color: transparent;
+        text-transform: uppercase;
+        padding: 22px 50px 21px 53px;
+        background-color: #A3BBC8;
+        color: #fff;
+        font-size: 15px;
+        letter-spacing: 2px;
+        border-radius: 5px;
+        margin-left: 14px;
+        cursor: pointer;
+    }
+    &__info{
+        color: $accent;
+        font-size: 16px;
+    }
+    &__info-item{
+        display: flex;
+        line-height: 25px;
+    }
+    &__info-title{
+        padding-right: 10px;
+    }
+}
+
+.jq-number__field{
+    width: 150px;
+    border: 1px solid #A3BBC8;
+    border-radius: 0;
+    &::before,
+    &::after{
+        position: absolute;
+        content: '';
+        width: 1px;
+        height: 58px;
+        background-color: #A3BBC8;
+    }
+    &::before{
+        left: 50px;
+    }
+    &::after{
+        right: 50px;
+    }
+}
+.jq-number__field input{
+    width: 100%;
+    height: 58px;
+    text-align: center;
+    @extend %rubik-400;
+    font-size: 15px;
+    color: #333;
+    // padding: 12px 0;
+    border: none;
+    outline: none;
+    background: none;
+}
+.jq-number{
+    padding: 0;
+    position: relative;
+}
+.jq-number__spin {
+    position: absolute;
+    cursor: pointer;
+    width: 9px;
+    height: 9px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.jq-number__spin.minus{
+    left: 23px;
+}
+.jq-number__spin.plus{
+    right: 23px;
+}
+.jq-number__spin::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 0px;
+    background-color: #333333;
+    width: 9px;
+    height: 1px;
+}
+.jq-number__spin.plus::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 4.5px;
+    background-color: #333333;
+    width: 1px;
+    height: 9px;
+}
+
+
+.detalis-slider{
+    display: flex;
+    &__thumb{
+        width: 139px;
+        margin-right: 24px;
+    }
+    &__thumb-item{
+        margin-bottom: 24px;
+        width: 139px;
+        height: 161px;
+        cursor: pointer;
+        img{
+            width: 139px;
+            height: 161px;
+            object-fit: cover;
+        }
+    }
+    &__big{
+        width: 388px;
+        height: 531px;
+        img{
+            // width: 388px;
+            // height: 531px;
+            object-fit: cover;
+        }
+    }
+    &__big-item{
+        padding: 70px 77px;
+    }
+
+}
+.detalis-tabs{
+    min-height: 210px;
+    &__top{
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: center;
+    }
+    &__link{
+        display: block;
+        color: $accent;
+        @extend %rubik-500;
+        font-size: 18px;
+        width: 242px;
+        height: 54px;
+        background-color: rgba($color: #A3BBC8, $alpha: 0.2);
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & + .detalis-tabs__link{
+            margin-left: 12px;
+        }
+    }
+    &__link--active{
+        background-color: rgba($color: #A3BBC8, $alpha: 1.0);
+        color: #fff;
+    }
+    &__content-item{
+        display: none;
+        color: $accent;
+        @extend %rubik-400;
+        font-size: 16px;
+        line-height: 28px;
+        &.detalis-tabs__content-item--active{
+            display: block;
+        }
+    }
+}
+
+.related{
+    margin-bottom: 120px;
+    &__title{
+        color: $accent;
+        @extend %dmsans-700;
+        font-size: 36px;
+        margin-bottom: 70px;
+    }
+    &__slider-item{
+        width: 270px;
+        height: 380px;
+        box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    }
+    .ofTheWeek__products-item{
+        box-shadow: none;
+    }
+    .slick-next,
+    .slick-prev{
+        position: absolute;
+        font-size: 0;
+        border: 2px solid rgba($color: #A3BBC8, $alpha: 0.2);
+        border-radius: 3px;
+        background-color: transparent;
+        width: 51px;
+        height: 51px;
+        top: -116px;
+        &::after{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 13px;
+        }
+    }
+    .slick-prev{
+        right: 70px;
+        &::after{
+            content: url(../images/prev-arrow.svg);
+        }
+    }
+    .slick-next{
+        right: 0;
+        &::after{
+            content: url(../images/next-arrow.svg);
+        }
+    }
+}
+
+
+
 
 
 
