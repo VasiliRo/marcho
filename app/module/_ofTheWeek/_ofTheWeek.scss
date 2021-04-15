@@ -1,0 +1,57 @@
+.ofTheWeek{
+    padding: 73px 0 86px;
+    &__title{
+        margin-bottom: 40px;
+    }
+    .section__filtr{
+        margin: 0 auto 80px;
+    }
+    &__products{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 380px );
+        grid-row-gap: 40px;
+        grid-column-gap: 30px;
+        justify-content: space-between;
+    }
+    &__products-item{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.1);
+        padding-bottom: 38px;
+    }
+    &__products-images{
+        // padding: 40px;
+        padding: 45px;
+    }
+    &__products-img{
+        margin: auto;
+    }
+    &__products-title{
+        @extend %dmsans-700;
+        font-size: 16px;
+        color: $accent;
+    }
+    &__products-price{
+        margin-top: 17px;
+        @extend %dmsans-700;
+        font-size: 16px;
+        color: #A3BBC8;
+    }
+    &__products-hover{
+        position: absolute;
+        display: flex;    
+        top: 182px;
+        left: 50px;  
+        opacity: 0;
+        transition: all .5s;
+    }
+    
+    &__products-item:hover{
+        .ofTheWeek__products-hover{
+            opacity: 1;
+        }
+    }
+}

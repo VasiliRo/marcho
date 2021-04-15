@@ -1,0 +1,30 @@
+.design{
+    padding: 100px 0;
+    &__title{
+        margin-bottom: 30px;
+    }
+    .section__filtr{
+        margin: 0 auto 80px;
+    }
+    &__content{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 247px );
+        grid-gap: 30px;
+        justify-content: space-between;
+    }
+    &__content-item{
+        padding: 45px 0 35px 40px;
+        @extend %dmsans-700;
+        background-color: #F8F8F8;
+    }
+    &__content-title{
+        font-size: 20px;
+        color: #1A1A1A;
+        margin-bottom: 20px;
+    }
+    &__content-link{
+        font-size: 16px;
+        color: #A3BBC8;
+    }
+}

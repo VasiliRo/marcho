@@ -1,0 +1,50 @@
+.specialOffer{
+    padding-top: 100px;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item{
+        min-height: 390px;
+        max-width: 870px;
+        width: 100%;
+        background-color: rgba(252, 215, 182, 0.4);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $accent;
+    }
+    &__item-img{
+        margin-right: 20px;
+        margin-top: -99px;
+    }
+    &__item-text{
+        max-width: 330px;
+    }
+    &__item-title{
+        @extend %dmsans-700;
+        font-size: 26px;
+        margin-bottom: 32px;
+    }
+    &__item-descr{
+        @extend %rubik-400;
+        font-size: 16px;
+        margin-bottom: 33px;
+    }
+    &__item-link{
+        color: #436372;
+        padding: 25px 86px 25px 21px;
+        @extend %rubik-500;
+        font-size: 15px;
+        border: 1px solid $accent;
+        border-radius: 5px;
+        display: inline-block;
+        position: relative;
+        &::after{
+            position: absolute;
+            content: url('../images/arrow-2.svg');
+            top: 25px;
+            right: 20px;
+        }
+    }
+}

@@ -48,6 +48,32 @@ body{
     color: #1A1A1A;
 }
 
+.hover-link{
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s;
+    &:nth-child(2){
+        span{
+            display: none;
+        }
+    }
+
+}
+.hover-link:hover{
+    background-color: #A3BBC8;
+    svg{
+        fill: #fff;
+    }
+}
+.hover-link+.hover-link{
+    margin-left: 15px;
+}
+
 .breadcrumbs{
     &__list{
         display: flex;
