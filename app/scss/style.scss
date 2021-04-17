@@ -101,36 +101,7 @@
     }
 }
 
-.terms{
-    padding-top: 120px;
-    &__content{
-        color: $accent;
-        line-height: 23px;
-    }
-    &__block+.terms__block{
-        margin-top: 70px;
-    }
-    &__title{
-        @extend %rubik-500;
-        font-size: 24px;
-        margin-bottom: 30px;
-    }
-    ol.terms__list{
-        padding-left: 25px;
-        list-style: decimal-leading-zero;
-    }
-    &__list-item,
-    &__text{
-        @extend %rubik-400;
-        font-size: 16px;
-    }
-    &__block{
-        margin-top: 70px;
-        &:first-child{
-            margin-top: 0;
-        }
-    }
-}
+
 
 .about{
     padding: 120px 0;

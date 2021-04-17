@@ -74,6 +74,20 @@ body{
     margin-left: 15px;
 }
 
+.top{
+    background-color: rgba(163, 187, 200, 0.2);
+    padding: 35px 0;
+    &__inner{
+        text-align: center;
+    }
+    &__title{
+        color: #222933;
+        @extend %rubik-300;
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+}
+
 .breadcrumbs{
     &__list{
         display: flex;
@@ -114,5 +128,13 @@ body{
     }
     .title{
         font-size: 26px;
+    }
+}
+
+@media (max-width: 500px){
+    .top{
+        &__title{
+            font-size: 30px;
+        }
     }
 }
