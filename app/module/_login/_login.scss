@@ -1,0 +1,65 @@
+.modal{
+    padding-top: 120px;
+    &__form{
+        max-width: 480px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 10px;
+        display: flex;
+        flex-direction: column;
+        color: #436372;
+        @extend %rubik-400;
+        font-size: 14px;
+    }
+    &__label{
+        display: block;
+        margin-bottom: 28px;
+    }
+    &__input{
+        display: block;
+        margin-top: 14px;
+        width: 100%;
+        background-color: #F6F6F6;
+        border: none;
+        height: 60px;
+    }
+    &__btn{
+        padding: 24px 0 20px;
+        background-color: #A3BBC8;
+        color: #FFFEFE;
+        @extend %rubik-500;
+        font-size: 18px;
+        border: none;
+        margin-bottom: 35px;
+    }
+    &__form-box{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 66px;
+    }
+    &__form-link{
+        color: #436372;
+        display: block;
+        padding-top: 4px;
+    }
+    &__register-btn{
+        margin-top: 23px;
+        border: none;
+        border: 1px solid #A3BBC8;
+        background-color: #fff;
+        color: $accent;
+        @extend %rubik-500;
+        font-size: 18px;
+        padding: 24px 0;
+    }
+    .partners{
+        margin-top: 120px;
+        padding-top: 90px;
+    }
+}
+
+@media (max-width: 500px){
+    .modal{
+        padding-top: 60px;
+    }    
+}
