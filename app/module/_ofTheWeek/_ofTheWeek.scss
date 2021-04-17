@@ -23,11 +23,12 @@
         padding-bottom: 38px;
     }
     &__products-images{
-        // padding: 40px;
         padding: 45px;
     }
     &__products-img{
         margin: auto;
+        max-width: 200px;
+        object-fit: cover;
     }
     &__products-title{
         @extend %dmsans-700;
@@ -55,3 +56,54 @@
         }
     }
 }
+
+@media (max-width: 960px){
+    .ofTheWeek{
+        &__products{
+            grid-row-gap: 30px;
+            grid-column-gap: 20px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 320px );
+        }
+        &__products-item{
+            padding: 30px;
+        }
+    }
+}
+
+@media (max-width: 820px){
+    .ofTheWeek{
+        &__products{
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 320px );
+        }
+        &__products-title{
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 650px){
+    .ofTheWeek{
+        padding: 40px 0;
+        &__products{
+            grid-row-gap: 20px;
+            grid-column-gap: 5px;
+        }
+    }
+}
+@media (max-width: 500px){
+    .ofTheWeek{
+        &__products{
+            grid-column-gap: 0;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: max-content;
+            grid-template-rows: auto;
+        }
+        &__products-item{
+            min-height: 400px;
+        }
+    }
+}
+
+

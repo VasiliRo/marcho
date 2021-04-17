@@ -7,3 +7,8 @@
     background-size: cover;
     background-position: center;
 }
+@media (max-width: 500px){
+    .video{
+        min-height: 320px;
+    }
+}
