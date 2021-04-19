@@ -158,6 +158,12 @@
     }
 }
 
+@media (max-width: 768px){
+    .user-nav__tile{
+        display: none;
+    }
+}
+
 @media (max-width: 650px){
     .header{
         &__inner{

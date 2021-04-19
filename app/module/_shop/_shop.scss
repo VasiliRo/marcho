@@ -1,0 +1,185 @@
+.shop{
+    padding: 120px 0;
+    &__inner{
+        display: flex;
+    }
+    &__filtres-btn{
+        display: none;
+        width: 40px;
+        height: 40px;
+        background-color: red;
+        position: fixed;
+        bottom: 50px;
+        right: 0;
+        z-index: 50;
+    }
+    &__content{
+        margin-left: 28px;
+        width: 100%;
+    }
+    &__items{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 380px );
+        grid-row-gap: 40px;
+        grid-column-gap: 30px;
+        justify-content: space-between;
+        margin-bottom: 105px;
+    }
+    .ofTheWeek__products-images{
+        margin: auto;
+    }
+    &__products-info{
+        text-align: center;
+    }
+    &__products-rate,
+    &__products-text{
+        display: none;
+    }
+    .hover-link{
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all .3s;
+        &:nth-child(2){
+            span{
+                color: #fff;
+                @extend %rubik-400;
+                font-size: 15px;
+                text-transform: uppercase;
+                display: none;
+            }
+        }
+
+    }
+    .hover-link:hover{
+        background-color: #A3BBC8;
+        svg{
+            fill: #fff;
+        }
+    }
+    .hover-link+.hover-link{
+        margin-left: 15px;
+    }
+    &__content.shop__content--list{
+        .shop__items{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .ofTheWeek__products-item{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            padding-bottom: 0;
+            margin-bottom: 40px;
+            box-shadow: none;
+        }
+        .ofTheWeek__products-images{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 371px;
+            height: 502px;
+            border: 2px solid #F2F2F2;
+            margin: 0;
+        }
+        .ofTheWeek__products-hover{
+            position: static;
+            opacity: 1;
+        }
+        .shop__products-rate,
+        .shop__products-text{
+            display: block;
+        }
+        .shop__products-info{
+            max-width: 405px;
+            width: 100%;
+            text-align: left;
+            padding-left: 57px;
+        }
+        .ofTheWeek__products-title{
+            font-size: 40px;
+            margin-bottom: 25px;
+        }
+        .ofTheWeek__products-price{
+            font-size: 30px;
+            margin: 37px 0;
+        }
+        .shop__products-text{
+            color: $accent;
+            @extend %rubik-400;
+            font-size: 16px;
+            margin-bottom: 33px;
+        }
+        .hover-link{
+            margin: 0 10px 0 0;
+            width: 51px;
+            height: 51px;
+            border-radius: 0;
+            transition: all .3s;
+            &:first-child{
+                display: none;
+            }
+            &:nth-child(2):hover{
+                width: 210px;
+                border-radius: 5px;
+                &+.hover-link,
+                svg{
+                    display: none;
+                }
+                span{
+                    display: inline;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px){
+    .shop{
+        &__inner{
+            display: block;
+        }
+        &__filtres{
+            width: 100%;
+            display: none;
+            position: absolute;
+            z-index: 49;
+            background-color: #fff;
+            top: 20px;
+            left: 0;
+            z-index: 49;
+            padding: 50px 50px 0;
+        }
+        &__filtres-btn{
+            display: block;
+        }
+        &__items{
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+        }
+        .filter-category{
+            display: block;
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .shop{
+        &__items{
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
+
+@media (max-width: 360px){
+    .shop{
+        &__items{
+            grid-template-columns: repeat(1, 260px);
+        }
+    }
+}
