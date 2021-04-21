@@ -16,7 +16,31 @@ $(function(){
     $('.related__slider').slick({
         infinite: true,
         slidesToShow: 4,
-        slidesToScroll: 4
+        slidesToScroll: 4,
+        responsive: [
+            {
+              breakpoint: 961,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3
+              }
+            },
+            {
+                breakpoint: 651,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 501,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  arrows: false
+                }
+            }
+          ]
     });
 
 
@@ -47,7 +71,15 @@ $(function(){
     $('.detalis-slider__big').slick({
         asNavFor: '.detalis-slider__thumb',
         draggable: false,
-        arrows: false
+        arrows: false,
+        responsive: [
+            {
+              breakpoint: 1201,
+              settings: {
+                draggable: true
+              }
+            }
+          ]
     });
 
 
@@ -75,7 +107,6 @@ $(function(){
     });
 
     $('.detalis__content-rate').rateYo({
-        rating: 4,
         starWidth: "18px",
         normalFill: "#ccccce",
         ratedFill: "#ffc35b",
