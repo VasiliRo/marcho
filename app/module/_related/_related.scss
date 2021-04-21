@@ -1,0 +1,70 @@
+.related{
+    margin-bottom: 120px;
+    &__title{
+        color: $accent;
+        @extend %dmsans-700;
+        font-size: 36px;
+        margin-bottom: 70px;
+    }
+    &__slider-item{
+        width: 270px;
+        height: 380px;
+        box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    }
+    .ofTheWeek__products-item{
+        box-shadow: none;
+    }
+    .slick-next,
+    .slick-prev{
+        position: absolute;
+        font-size: 0;
+        border: 2px solid rgba($color: #A3BBC8, $alpha: 0.2);
+        border-radius: 3px;
+        background-color: transparent;
+        width: 51px;
+        height: 51px;
+        top: -116px;
+        &::after{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 13px;
+        }
+    }
+    .slick-prev{
+        right: 70px;
+        &::after{
+            content: url(../images/prev-arrow.svg);
+        }
+    }
+    .slick-next{
+        right: 0;
+        &::after{
+            content: url(../images/next-arrow.svg);
+        }
+    }
+}
+
+
+@media(max-width: 650px){
+    .related{
+        &__title{
+            margin-bottom: 10px;
+        }
+        .slick-next,
+        .slick-prev{
+            top: -60px;
+        }
+    }
+}
+
+@media(max-width: 500px){
+    .related{
+        &__title{
+            font-size: 30px;
+        }
+        .ofTheWeek__products-item {
+            padding: 10px;
+        }
+    }
+}

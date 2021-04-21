@@ -1,0 +1,111 @@
+.ofTheWeek{
+    padding: 73px 0 86px;
+    &__title{
+        margin-bottom: 40px;
+    }
+    .section__filtr{
+        margin: 0 auto 80px;
+    }
+    &__products{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 380px );
+        grid-row-gap: 40px;
+        grid-column-gap: 30px;
+        justify-content: space-between;
+    }
+    &__products-item{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.1);
+        padding-bottom: 38px;
+    }
+    &__products-images{
+        padding: 45px;
+    }
+    &__products-img{
+        margin: auto;
+        max-width: 200px;
+        object-fit: cover;
+    }
+    &__products-title{
+        @extend %dmsans-700;
+        font-size: 16px;
+        color: $accent;
+    }
+    &__products-price{
+        margin-top: 17px;
+        @extend %dmsans-700;
+        font-size: 16px;
+        color: #A3BBC8;
+    }
+    &__products-hover{
+        position: absolute;
+        display: flex;    
+        top: 182px;
+        // left: 50px;  
+        left: calc(50% - 84px);  
+        opacity: 0;
+        transition: all .5s;
+    }
+    
+    &__products-item:hover{
+        .ofTheWeek__products-hover{
+            opacity: 1;
+        }
+    }
+}
+
+
+@media (max-width: 960px){
+    .ofTheWeek{
+        &__products{
+            grid-row-gap: 30px;
+            grid-column-gap: 20px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 320px );
+        }
+        &__products-item{
+            padding: 30px;
+        }
+    }
+}
+
+@media (max-width: 820px){
+    .ofTheWeek{
+        &__products{
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 320px );
+        }
+        &__products-title{
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 650px){
+    .ofTheWeek{
+        padding: 40px 0;
+        &__products{
+            grid-row-gap: 20px;
+            grid-column-gap: 5px;
+        }
+    }
+}
+@media (max-width: 500px){
+    .ofTheWeek{
+        &__products{
+            grid-column-gap: 0;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: max-content;
+            grid-template-rows: auto;
+        }
+        &__products-item{
+            min-height: 400px;
+        }
+    }
+}
+
+

@@ -1,0 +1,14 @@
+.video{
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+@media (max-width: 500px){
+    .video{
+        min-height: 320px;
+    }
+}

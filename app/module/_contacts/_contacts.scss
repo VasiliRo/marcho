@@ -1,0 +1,128 @@
+.contacts-info{
+    padding-top: 120px;
+    &__subtitle{
+        color: #A3BBC8;
+        @extend %poppins-700;
+        font-size: 16px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    &__title{
+        color: #436372;
+        @extend %dmsans-700;
+        font-size: 35px;
+        margin-bottom: 75px;
+        text-align: center;
+    }
+    &__items{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 117px;
+    }
+    &__item{
+        text-align: center;
+        padding: 71px 10px 0;
+        max-width: 372px;
+        min-height: 384px;
+        width: 100%;
+        border: 2px solid transparent;
+        transition: all .5s;
+        &:hover{
+            &{
+                border: 2px solid #A3BBC8;
+            }
+            .contacts-info__images{
+                background-color: #A3BBC8;
+                svg{
+                    fill: #fff;
+                }
+            }
+        }
+    }
+    &__images{
+        margin: 0 auto;
+        margin-bottom: 65px;
+        width: 81px;
+        height: 81px;
+        background-color: #fff;
+        border-radius: 20px;
+        transition: all .5s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__item-title{
+        color: #222222;
+        @extend %dmsans-700;
+        font-size: 20px;
+        margin-bottom: 28px;
+    }
+    &__text{
+        color: #565872;
+        @extend %rubik-400;
+        font-size: 16px;
+        line-height: 30px;
+    }
+    &__text-link{
+        color: #565872;
+        display: block;
+    }
+}
+
+.contacts-bottom{
+    &__inner{
+        display: flex;
+        align-items: center;
+        .comments-form{
+            max-width: 621px;
+            width: 100%;
+            margin-right: 50px;
+            &__text-input,
+            &__textarea{
+                &::placeholder{
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
+
+.contacts-map{
+    max-width: 501px;
+    width: 100%;
+    height: 335px;
+}
+
+@media(max-width: 650px){
+    .contacts-info{
+        &__title{
+            margin-bottom: 40px;
+        }
+        &__items{
+            flex-direction: column;
+            margin-bottom: 50px;
+        }
+        &__item{
+            max-width: 100%;
+        }
+    }
+    .contacts-bottom{
+        &__inner{
+            flex-wrap: wrap;
+            .comments-form{
+                margin-right: 0;
+                max-width: 100%;
+                margin-bottom: 30px;
+            }
+        }
+    }
+    .contacts-map{
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 500px){
+    .contacts-info{
+        padding-top: 60px;
+    }    
+}

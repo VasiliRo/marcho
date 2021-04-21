@@ -1,0 +1,113 @@
+.specialOffer{
+    padding-top: 100px;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item{
+        min-height: 390px;
+        width: 100%;
+        max-width: 870px;
+        background-color: rgba(252, 215, 182, 0.4);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $accent;
+        padding: 0 10px;
+        &:first-child{
+            margin-right: 10px;
+        }
+    }
+    &__item-img{
+        margin-right: 20px;
+        margin-top: -99px;
+    }
+    &__item-text{
+        max-width: 330px;
+        padding-right: 5px;
+    }
+    &__item-title{
+        @extend %dmsans-700;
+        font-size: 26px;
+        margin-bottom: 32px;
+        min-height: 60px
+    }
+    &__item-descr{
+        @extend %rubik-400;
+        font-size: 16px;
+        margin-bottom: 33px;
+    }
+    &__item-link{
+        color: #436372;
+        padding: 25px 86px 25px 21px;
+        @extend %rubik-500;
+        font-size: 15px;
+        border: 1px solid $accent;
+        border-radius: 5px;
+        display: inline-block;
+        position: relative;
+        &::after{
+            position: absolute;
+            content: url('../images/arrow-2.svg');
+            top: 25px;
+            right: 20px;
+        }
+    }
+}
+
+@media (max-width: 1200px){
+    .specialOffer{
+        &__inner{
+            flex-wrap: wrap;
+        }
+        &__item{
+            max-width: 100%;
+            &:first-child{
+                margin-right: 0;
+                margin-bottom: 80px;
+            }
+        }
+    }
+}
+
+@media (max-width: 500px){
+    .specialOffer{
+        &__item{
+            min-height: 350px;
+            &:first-child{
+                margin-bottom: 20px;
+            }
+        }
+        &__item-img{
+            width: 40%;
+            margin-top: 0;
+        }
+        &__item-title{
+            font-size: 22px;
+        }
+        &__item-descr{
+            font-size: 14px;
+        }
+        &__item-link{
+            font-size: 11px;
+        }
+    }
+}
+
+@media (max-width: 360px){
+    .specialOffer{
+        &__item{
+            flex-direction: column;
+            padding: 40px 10px;
+        }
+        &__item-text{
+            text-align: center;
+        }
+        &__item-title{
+            min-height: auto;
+        }
+        &__item-img{
+            margin-bottom: 30px;
+        }
+    }
+}

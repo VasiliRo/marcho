@@ -1,0 +1,251 @@
+.about{
+    padding: 120px 0;
+    color: $accent;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        height: 680px;
+    }
+    &__images{
+        max-width: 572px;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &__content{
+        max-width: 550px;
+        padding: 86px 0 97px;
+        margin-left: 20px;
+    }
+    &__top{
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 53px;
+    }
+    &__top-num{
+        margin-right: 30px;
+        color: #A3BBC8;
+        @extend %rubik-700;
+        font-size: 140px;
+        line-height: 105px;
+    }
+    &__top-item{
+        padding-top: 10px;
+        @extend %rubik-400;
+        font-size: 16px;
+    }
+    &__text{
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            height: 4px;
+            max-width: 500px;
+            width: 100%;
+            background-color: rgba($color: #09316F, $alpha: 0.1)
+        }
+    }
+    &__title{
+        @extend %dmsans-700;
+        font-size: 36px;
+        margin-bottom: 50px;
+    }
+    &__descr{
+        font-size: 16px;
+        @extend %rubik-400;
+        margin-bottom: 63px;
+        line-height: 26px;
+    }
+    &__achievements{
+        padding-top: 42px;
+        display: flex;
+        justify-content: space-between;
+        max-width: 525px;
+        width: 100%;
+    }
+    &__achievements-item{
+        @extend %dmsans-700;
+        padding-left: 50px;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            background-repeat: no-repeat;
+            width: 45px;
+            height: 45px;
+            top: 5px;
+            left: -5px;
+        }
+        &:first-child{
+            &::before{
+            background-image: url('../images/icons/projects-img.svg');
+            }
+        }
+        &:nth-child(2){
+            &::before{
+            background-image: url('../images/icons/revenue-img.svg');
+            }
+        }
+        &:last-child{
+            &::before{
+            background-image: url('../images/icons/awards-img.svg');
+            }
+        }
+    }
+    &__achievements-item+.about__achievements-item{
+        &::after{
+            position: absolute;
+            content: '';
+            width: 2px;
+            height: 82px;
+            background-color: rgba($color: #09316F, $alpha: 0.1);
+            top: -17px;
+            left: -35px;
+        }
+    }
+    &__achievements-num{
+        font-size: 36px;
+        margin-bottom: 13px;
+        line-height: 19px;
+    }
+    &__achievements-text{
+        color: #4C4C4C;
+        font-size: 16px;
+    }
+}
+
+.widgets{
+    padding: 84px 0;
+    background-color: $accent-bg;
+    &__inner{
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+    }
+    &__item{
+        text-align: center;
+        color: $accent;
+        @extend %dmsans-700;
+    }
+    &__item-images{
+        position: relative;
+        width: 68px;
+        height: 65px;
+        margin: auto;
+        display: flex;
+        align-items: flex-end;
+        &::after{
+            content: '';
+            position: absolute;
+            width: 36px;
+            height: 36px;
+            background-color: rgba($color: #A3BBC8, $alpha: 0.6);
+            border-radius: 50%;
+            top: 13px;
+            right: -9px;
+        }
+    }
+    &__item-img{
+        margin: 0 auto;
+        margin-bottom: 25px;
+    }
+    &__item-num{
+        font-size: 36px;
+        margin-bottom: 26px;
+    }
+    &__item-text{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 960px){
+    .about{
+        &__inner{
+            flex-direction: column;
+            height: auto;
+        }
+        &__images{
+            min-height: 400px;
+            background-position: center;
+            max-width: 100%;
+        }
+        &__content{
+            max-width: 100%;
+            padding-bottom: 0;
+        }
+        &__achievements{
+            margin: 0 auto;
+        }
+        &__text{
+            &::after{
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .widgets{
+        &__inner{
+            flex-wrap: wrap;
+        }
+        &__item{
+            margin: 50px;
+        }
+    }
+}
+
+@media (max-width: 650px){
+    .about__achievements-item + .about__achievements-item::after{
+        display: none;
+    }
+}
+
+
+@media (max-width: 500px){
+    .about{
+        padding: 60px 0;
+        &__content{
+            padding-top: 45px;
+        }
+        &__top{
+            margin-bottom: 30px;
+        }
+        &__top-num{
+            font-size: 100px;
+            line-height: 75px;
+            margin-bottom: 0px;
+        }
+        &__title{
+            font-size: 30px;
+            margin-bottom: 25px;
+        }
+        &__descr{
+            margin-bottom: 40px;
+        }
+        &__achievements{
+            justify-content: space-around;
+        }
+        &__achievements-item{
+            padding-left: 00px;
+            &::before{
+                display: none;
+            }
+        }
+        &__achievements-num{
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+    }
+    .widgets{
+        padding: 40px 0;
+        &__item-num{
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        &__item{
+            margin: 30px;
+        }
+    }
+}
