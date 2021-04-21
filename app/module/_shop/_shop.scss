@@ -178,8 +178,12 @@
 
 @media (max-width: 360px){
     .shop{
+        padding-right: 20px;
         &__items{
             grid-template-columns: repeat(1, 260px);
+        }
+        .ofTheWeek__products-images{
+            padding: 5px;
         }
     }
 }
